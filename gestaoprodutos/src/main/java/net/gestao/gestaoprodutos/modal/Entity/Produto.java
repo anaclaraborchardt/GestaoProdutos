@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import net.gestao.gestaoprodutos.modal.ENUM.Categorias;
 
 import java.sql.Date;
 
@@ -32,9 +31,10 @@ public class Produto {
     private Double peso;
     @Column(nullable = false)
     private double medida;
-    @Column(nullable = false)
-    private String fabricante;
-    @Column(nullable = false)
-    @Enumerated
-    private Categorias categoria;
+    @JoinColumn(nullable = false)
+    @ManyToOne
+    private Fabricante fabricante;
+    @JoinColumn(nullable = false)
+    @ManyToOne
+    private Categoria categoria;
 }

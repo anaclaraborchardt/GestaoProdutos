@@ -1,10 +1,8 @@
 package net.gestao.gestaoprodutos.modal.DTO;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Enumerated;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import net.gestao.gestaoprodutos.modal.ENUM.Categorias;
+import net.gestao.gestaoprodutos.modal.Entity.Categoria;
 import net.gestao.gestaoprodutos.modal.Entity.Fabricante;
 
 import java.util.Date;
@@ -21,7 +19,7 @@ public class ProdutoDTO {
     private Long codigoBarras;
     private Double peso;
     private double medida;
-    private String fabricante;
-    private Categorias categoria;
+    private Fabricante fabricante;
+    private Categoria categoria;
 
 }

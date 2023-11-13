@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Fabricante {
+public class Categoria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,6 +21,7 @@ public class Fabricante {
     private String nome;
     private String descricao;
     @JsonIgnore
-    @OneToMany(mappedBy = "fabricante")
-    private List<Produto> produtos;
+    @OneToMany(mappedBy = "categoria")
+    List<Produto> produtos;
+
 }
