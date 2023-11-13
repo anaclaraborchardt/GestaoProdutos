@@ -57,10 +57,8 @@ public class ProdutoService {
             throw new RuntimeException("O preço não pode ser menor que 0");
         }else if(produto.getNome() == null){
             throw new RuntimeException("O nome deve ser preenchido");
-        }else if(produto.getDescricao() == null){
+        }else if(produto.getDescricao() == null) {
             throw new RuntimeException("A descrição deve ser preenchido");
-        }else if(produtoRepository.existsById(produto.getId())){
-            throw new RuntimeException("Não pode haver id igual");
         }
     }
     public void validacoes(ProdutoEdicaoDTO produtoDTO){

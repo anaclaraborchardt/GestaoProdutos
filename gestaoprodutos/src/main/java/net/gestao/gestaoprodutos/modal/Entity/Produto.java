@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.gestao.gestaoprodutos.modal.ENUM.Categorias;
+
 import java.sql.Date;
 
 @AllArgsConstructor
@@ -33,6 +34,7 @@ public class Produto {
     private double medida;
     @Column(nullable = false)
     private String fabricante;
+    @Column(nullable = false)
     @Enumerated
     private Categorias categoria;
 }
